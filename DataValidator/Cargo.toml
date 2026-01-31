@@ -1,0 +1,18 @@
+[package]
+name = "data_validator"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4.5.54", features = ["derive"] }
+derive_more = { version = "2.1.1", features = ["from_str"] }
+eyre = "0.6.12"
+serde = { version = "1.0.228", features = ["derive"] }
+
+[lib]
+name = "data_validator_lib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "data_validator"
+path = "src/main.rs"
